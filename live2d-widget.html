@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <meta name="keywords" content="Highlight,代码高亮,code" />
+    <meta name="description" content="Syntax highlighting for the Web" />
+    <link rel="stylesheet" href="css/Highlight-black-style.css">
+    <script src="js/Highlight.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./item/live2d-widget/autoload.js" />
+    <title>My Css Code</title>
+    <style>
+        p.aaa{font-family: consolas,Menlo,'PingFang SC','Microsoft YaHei',sans-serif!important; line-height: 1.6;}
+    </style>
+</head>
+
+<div style="background: #1f1c20; width:100%; background-color: rgba(0, 0, 0, 0); top: 0;">
+	<a style="-webkit-tap-highlight-color:rgba(0,0,0,0); text-decoration: none;" href="../../index-PE.html">
+		<img style="margin: 5px 0px 0px 25px;" src="images/title-logo.png" width="150px" />
+	</a>
+</div>
+
+<div class="text-box">
+	<h1 class="title">live2d-widget</h1>
+</div>
+
+<div id="connect">
+  <div id="post">
+
+<h2>## install</h2>
+
+<pre>
+<code class="html">
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/gh/k34869/cbk/item/live2d-widget/autoload.js"</span> /&gt;</span>
+</code>
+</pre>
+
+  <a href="https://github.com/stevenjoezhang/live2d-widget" alt="live2d-widget" title="live2d-widget">     https://github.com/stevenjoezhang/live2d-widget</a><br />
+
+  </div>
+<div id="sider_bar">
+	<embed type="text/html" src="https://www.re-bang.com/" width="100%" height="1580">
+</div>
+</div>
+<!-- 底部布局 -->
+<div style="width: 100%; height:80px; float: left; border-top: 0.5px solid #404040; margin-top: 10px; padding-top: 30px;">
+<p style="color: grey; font-size:14px; text-align: center; margin-bottom: 0;">©Copyright Time Science 2021.<br />All Rights Reserved</p></div>
+<!-- /底部布局 -->
+
+<script src="js/style.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    var e = document.querySelectorAll("code");
+
+var e_len = e.length;
+
+var i;
+
+for (i = 0; i < e_len; i++) {
+
+e[i].innerHTML = "<ol><li>" + e[i].innerHTML.replace(/\n/g, "\n</li><li>") + "\n</li></ol>";
+
+}
+</script>
+</body>
+</html>

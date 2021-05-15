@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <meta name="keywords" content="Highlight,代码高亮,code" />
+    <meta name="description" content="Syntax highlighting for the Web" />
+    <link rel="stylesheet" href="css/Highlight-black-style.css">
+    <script src="js/Highlight.js"></script>
+    <title>Highlight.js</title>
+</head>
+
+<div style="background: #1f1c20; width:100%; background-color: rgba(0, 0, 0, 0); top: 0;">
+	<a style="-webkit-tap-highlight-color:rgba(0,0,0,0); text-decoration: none;" href="../../index-PE.html">
+		<img style="margin: 5px 0px 0px 25px;" src="images/title-logo.png" width="150px" />
+	</a>
+</div>
+
+<div class="text-box">
+	<h1 class="title">Highlight.js</h1>
+</div>
+
+<div id="connect">
+  <div id="post">
+<br />
+  <p>website for <a href="https://highlightjs.org/">https://highlightjs.org/</a></p>
+  <p>gitee cdn: <a href="https://cbk.timeic.xyz/js/Highlight.js">https://cbk.timeic.xyz/js/Highlight.js</a></p>
+<h2>## HTML,XML</h2>
+<pre>
+<code class="language-xml hljs"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"><span class="hljs-selector-tag">body</span> {<span class="hljs-attribute">width</span>: <span class="hljs-number">500px</span>;}</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/javascript"</span>&gt;</span><span class="javascript">
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">$init</span>(<span class="hljs-params"></span>) </span>{<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;}
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">checked</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'title'</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- here goes the rest of the page --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    </code>
+</pre>
+
+<h2>## Bash</h2>
+<pre>
+    <code class='bash'>
+        #!/bin/bash
+
+        ###### CONFIG
+        ACCEPTED_HOSTS="/root/.hag_accepted.conf"
+        BE_VERBOSE=false
+        
+        if [ "$UID" -ne 0 ]
+        then
+         echo "Superuser rights required"
+         exit 2
+        fi
+        
+        genApacheConf(){
+         echo -e "# Host ${HOME_DIR}$1/$2 :"
+        }
+        
+        echo '"quoted"' | tr -d \" > text.txt
+    </code>
+</pre>
+
+<h2>## C++</h2>
+<pre>
+    <code class="c++">
+#include <iostream>
+
+    int main(int argc, char *argv[]) {
+    
+      /* An annoying "Hello World" example */
+      for (auto i = 0; i < 0xFFFF; i++)
+        cout << "Hello, World!" << endl;
+    
+      char c = '\n';
+      unordered_map <string, vector<string> > m;
+      m["key"] = "\\\\"; // this is an error
+    
+      return -2e3 + 12l;
+    }
+    </code>
+</pre>
+
+<h2>## CSS</h2>
+<pre>
+    <code class="css">
+@font-face {
+    font-family: Chunkfive; src: url('Chunkfive.otf');
+  }
+  
+  body, .usertext {
+    color: #F0F0F0; background: #600;
+    font-family: Chunkfive, sans;
+    --heading-1: 30px/32px Helvetica, sans-serif;
+  }
+  
+  @import url(print.css);
+  @media print {
+    a[href^=http]::after {
+      content: attr(href)
+    }
+  }
+    </code>
+</pre>
+
+<h2>## HTTP</h2>
+<pre>
+    <code class="http">
+POST /task?id=1 HTTP/1.1
+Host: example.org
+Content-Type: application/json; charset=utf-8
+Content-Length: 137
+
+{
+  "status": "ok",
+  "extended": true,
+  "results": [
+    {"value": 0, "type": "int64"},
+    {"value": 1.0e+3, "type": "decimal"}
+  ]
+}
+    </code>
+</pre>  
+
+<h2>## JavaScript</h2>
+<pre>
+    <code class="javascript">
+  function $initHighlight(block, cls) {
+    try {
+      if (cls.search(/\bno\-highlight\b/) != -1)
+        return process(block, true, 0x0F) +
+               ` class="${cls}"`;
+    } catch (e) {
+      /* handle exception */
+    }
+    for (var i = 0 / 2; i < classes.length; i++) {
+      if (checkCondition(classes[i]) === undefined)
+        console.log('undefined');
+    }
+  
+    return (
+      {block}
+    )
+  }
+  
+  export  $initHighlight;
+    </code>
+</pre>
+
+<h2>## JSON</h2>
+<pre>
+    <code class="json">
+        [
+        {
+          "title": "apples",
+          "count": [12000, 20000],
+          "description": {"text": "...", "sensitive": false}
+        },
+        {
+          "title": "oranges",
+          "count": [17500, null],
+          "description": {"text": "...", "sensitive": false}
+        }
+      ]
+    </code>
+</pre>
+
+<h2>## less</h2>
+<pre>
+    <code class="less">
+        @import "fruits";
+
+        @rhythm: 1.5em;
+        
+        @media screen and (min-resolution: 2dppx) {
+            body {font-size: 125%}
+        }
+        
+        section > .foo + #bar:hover [href*="less"] {
+            margin:     @rhythm 0 0 @rhythm;
+            padding:    calc(5% + 20px);
+            background: #f00ba7 url(http://placehold.alpha-centauri/42.png) no-repeat;
+            background-image: linear-gradient(-135deg, wheat, fuchsia) !important ;
+            background-blend-mode: multiply;
+        }
+        
+        @font-face {
+            font-family: /* ? */ 'Omega';
+            src: url('../fonts/omega-webfont.woff?v=2.0.2');
+        }
+        
+        .icon-baz::before {
+            display:     inline-block;
+            font-family: "Omega", Alpha, sans-serif;
+            content:     "\f085";
+            color:       rgba(98, 76 /* or 54 */, 231, .75);
+        }
+    </code>
+</pre>
+
+<h2>## Nginx Config</h2>
+<pre>
+    <code class="nginx">
+        user  www www;
+        worker_processes  2;
+        pid /var/run/nginx.pid;
+        error_log  /var/log/nginx.error_log  debug | info | notice | warn | error | crit;
+        
+        events {
+            connections   2000;
+            use kqueue | rtsig | epoll | /dev/poll | select | poll;
+        }
+        
+        http {
+            log_format main      '$remote_addr - $remote_user [$time_local] '
+                                 '"$request" $status $bytes_sent '
+                                 '"$http_referer" "$http_user_agent" '
+                                 '"$gzip_ratio"';
+        
+            send_timeout 3m;
+            client_header_buffer_size 1k;
+        
+            gzip on;
+            gzip_min_length 1100;
+        
+            #lingering_time 30;
+        
+            server {
+                server_name   one.example.com  www.one.example.com;
+                access_log   /var/log/nginx.access_log  main;
+        
+                rewrite (.*) /index.php?page=$1 break;
+        
+                location / {
+                    proxy_pass         http://127.0.0.1/;
+                    proxy_redirect     off;
+                    proxy_set_header   Host             $host;
+                    proxy_set_header   X-Real-IP        $remote_addr;
+                    charset            koi8-r;
+                }
+        
+                location /api/ {
+                    fastcgi_pass 127.0.0.1:9000;
+                }
+        
+                location ~* \.(jpg|jpeg|gif)$ {
+                    root         /spool/www;
+                }
+            }
+        }
+    </code>
+</pre>
+
+<h2>## PHP</h2>
+<pre>
+    <code class="php">
+require_once 'Zend/Uri/Http.php';
+
+namespace Location\Web;
+
+interface Factory
+{
+    static function _factory();
+}
+
+abstract class URI extends BaseURI implements Factory
+{
+    abstract function test();
+
+    public static $st1 = 1;
+    const ME = "Yo";
+    var $list = NULL;
+    private $var;
+
+    /**
+     * Returns a URI
+     *
+     * @return URI
+     */
+    static public function _factory($stats = array(), $uri = 'http')
+    {
+        echo __METHOD__;
+        $uri = explode(':', $uri, 0b10);
+        $schemeSpecific = isset($uri[1]) ? $uri[1] : '';
+        $desc = 'Multi
+line description';
+
+        // Security check
+        if (!ctype_alnum($scheme)) {
+            throw new Zend_Uri_Exception('Illegal scheme');
+        }
+
+        $this->var = 0 - self::$st;
+        $this->list = list(Array("1"=> 2, 2=>self::ME, 3 => \Location\Web\URI::class));
+
+        return [
+            'uri'   => $uri,
+            'value' => null,
+        ];
+    }
+}
+
+match ($key) {
+    1 => 'Integer 1',
+    '1' => 'String 1',
+    true => 'Bool true',
+    [] => 'Empty array',
+    [1] => 'Array [1]',
+};
+
+enum Foo: string {
+    case Test = 'test';
+}
+
+match ($key) {
+    1 => 'Integer 1',
+    '1' => 'String 1',
+    true => 'Bool true',
+    [] => 'Empty array',
+    [1] => 'Array [1]',
+};
+
+echo URI::ME . URI::$st1;
+
+__halt_compiler () ; datahere
+datahere
+datahere */
+datahere
+    </code>
+</pre>
+
+<h2>## Python</h2>
+<pre>
+    <code class="c++">
+        @requires_authorization(roles=["ADMIN"])
+        def somefunc(param1='', param2=0):
+            r'''A docstring'''
+            if param1 > param2: # interesting
+                print 'Gre\'ater'
+            return (param2 - param1 + 1 + 0b10l) or None
+        
+        class SomeClass:
+            pass
+        
+        >>> message = '''interpreter
+        ... prompt'''
+    </code>
+</pre>
+
+<h2>## Sql</h2>
+<pre>
+    <code class="sql">
+CREATE TABLE "topic" (
+    "id" serial NOT NULL PRIMARY KEY,
+    "forum_id" integer NOT NULL,
+    "subject" varchar(255) NOT NULL
+);
+ALTER TABLE "topic"
+ADD CONSTRAINT forum_id FOREIGN KEY ("forum_id")
+REFERENCES "forum" ("id");
+
+-- Initials
+insert into "topic" ("forum_id", "subject")
+values (2, 'D''artagnian');
+    </code>
+</pre>
+
+<h2>## YAML</h2>
+<pre>
+    <code class="yaml">
+---
+# comment
+string_1: "Bar"
+string_2: 'bar'
+string_3: bar
+inline_keys_ignored: sompath/name/file.jpg
+keywords_in_yaml:
+  - true
+  - false
+  - TRUE
+  - FALSE
+  - 21
+  - 21.0
+  - !!str 123
+"quoted_key": &foobar
+  bar: foo
+  foo:
+  "foo": bar
+
+reference: *foobar
+
+multiline_1: |
+  Multiline
+  String
+multiline_2: >
+  Multiline
+  String
+multiline_3: "
+  Multiline string
+  "
+
+ansible_variables: "foo {{variable}}"
+
+array_nested:
+- a
+- b: 1
+  c: 2
+- b
+- comment
+    </code>
+</pre>
+
+<h2>## TypeScript</h2>
+<pre>
+    <code class="typescript">
+class MyClass {
+    public static myValue: string;
+    constructor(init: string) {
+      this.myValue = init;
+    }
+  }
+  import fs = require("fs");
+  module MyModule {
+    export interface MyInterface extends Other {
+      myProperty: any;
+    }
+  }
+  declare magicNumber number;
+  myArray.forEach(() => { }); // fat arrow syntax
+    </code>
+</pre>
+</div>
+
+
+<div id="sider_bar">
+	<embed type="text/html" src="https://www.re-bang.com/" width="100%" height="1580">
+</div>
+</div>
+<!-- 底部布局 -->
+<div style="width: 100%; height:80px; float: left; border-top: 0.5px solid #404040; margin-top: 10px; padding-top: 30px;">
+<p style="color: grey; font-size:14px; text-align: center; margin-bottom: 0;">©Copyright Time Science 2021.<br />All Rights Reserved</p></div>
+<!-- /底部布局 -->
+
+<script src="js/style.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    var e = document.querySelectorAll("code");
+
+var e_len = e.length;
+
+var i;
+
+for (i = 0; i < e_len; i++) {
+
+e[i].innerHTML = "<ol><li>" + e[i].innerHTML.replace(/\n/g, "\n</li><li>") + "\n</li></ol>";
+
+}
+</script>
+</body>
+</html>
