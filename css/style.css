@@ -4,7 +4,7 @@ body{
 }
 
 #connect{
-  width: 80%;
+  width: 75%;
   margin: 10px auto;
 }
 
@@ -12,19 +12,7 @@ body{
   background: #1f1c21;
   border-radius: 10px;
   box-shadow: -0.01px -0.01px 1.5px 0px #3c3c3c;
-  width: 62%;
-  float: left;
   margin-right: 10px;
-  padding: 10px 0 10px 0;
-}
-
-#sider_bar{
-  background: #1f1c21;
-  border-radius: 10px;
-  box-shadow: -0.01px -0.01px 1.5px 0px #3c3c3c;
-  width: 36.1%;
-  float: left;
-  margin-left: 10px;
   padding: 10px 0 10px 0;
 }
 
@@ -128,9 +116,6 @@ strong{
   #connect{
     width: 85%;
   }
-  #sider_bar{
-    width: 35.7%;
-  }
   div.text-box{
     padding: 95px 0 95px 0;
   }
@@ -149,9 +134,6 @@ strong{
 @media only screen and (max-width: 1060px) {
   #connect{
     width: 90%;
-  }
-  #sider_bar{
-    width: 35.4%;
   }
   div.text-box{
     padding: 75px 0 75px 0;
@@ -174,11 +156,6 @@ strong{
     float: none;
     margin: 0 auto;
   }
-  #sider_bar{
-    float: none;
-    width: 90%;
-    margin: 10px auto;
-  }
   div.text-box{
     padding: 55px 0 55px 0;
   }
@@ -199,11 +176,6 @@ strong{
     width: 95%;
     float: none;
     margin: 0 auto;
-  }
-  #sider_bar{
-    float: none;
-    width: 95%;
-    margin: 10px auto;
   }
   div.text-box{
     padding: 50px 0 50px 0;
